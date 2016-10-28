@@ -6,6 +6,14 @@ import Dog from './dog';
 
 const dogBark = new Dog('Browser Toby').bark();
 
+fetch('http://loripsum.net/api', {
+  method: 'get',
+}).then((response) => {
+  console.log(response);
+}).catch((err) => {
+  console.log(err);
+});
+
 const App = props => (
   <div>
     The dog happily says: {props.message}
